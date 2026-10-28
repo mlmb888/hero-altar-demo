@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <title>英雄祭坛 · 试玩版</title>
+  <meta name="ha-build-version" content="v2-build-pace" />
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+    html, body {
+      width: 100%; height: 100%;
+      background: #0b0e14;
+      overflow: hidden;
+      touch-action: none;
+      overscroll-behavior: none;
+      font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+      color: #eee;
+      /* iPhone safe areas */
+      padding: env(safe-area-inset-top, 0px) env(safe-area-inset-right, 0px)
+               env(safe-area-inset-bottom, 0px) env(safe-area-inset-left, 0px);
+    }
+    #wrap {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    #game {
+      display: block;
+      background: #1a2332;
+      touch-action: none;
+      /* JS sets exact CSS size for letterbox-free cover within safe area */
+    }
+  </style>
+</head>
+<body>
+  <div id="wrap">
+    <canvas id="game" width="393" height="852"></canvas>
+  </div>
+  <script src="config.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
